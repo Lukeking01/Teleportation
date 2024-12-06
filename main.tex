@@ -1,0 +1,40 @@
+\documentclass[12pt,titlepage]{article}
+
+\input{format/preamble}
+
+%%%
+\def\nameoflab{Beam up my quantum state, Scotty!}
+\def\coursecode{FYST85}
+
+\def\authorOne{Max Eriksson \& Lukas Nord}
+\def\authorOneMail{maxerikss@gmail.com\\ Lukassigvard@gmail.com}
+\def\headerName{M. Eriksson, L. Nord}
+
+\def\supervisor{Peter Samuelsson}
+\def\supervisorMail{peter.samuelsson@teorfys.lu.se}
+
+\begin{document}
+\include{format/titlepage}
+%\pagestyle{empty}
+\input{format/header}
+
+\tableofcontents
+
+\clearpage
+\setcounter{page}{1}
+
+\pagestyle{fancy}
+\doublespacing
+
+\input{paper/introduction}
+
+\clearpage
+\addcontentsline{toc}{section}{References}
+\begin{singlespace}
+\bibliographystyle{ieeetr}
+\bibliography{references.bib}
+\end{singlespace}
+
+%\include{paper/appendix}
+
+\end{document}
