@@ -1,8 +1,22 @@
 \section{Introduction}
-\begin{itemize}
-    \item Quantum teleportation protocol
-    \item Why is it needed?
-    \item Areas of application, quantum communications, quantum computers
-    \item what is needed to realize it on a large scale, i.e. quantum repeaters, memory...
-    \item EPR-pairs and bell basis
-\end{itemize}
+\begin{mybox}{Bullet points}
+    \begin{itemize}
+        \item Quantum teleportation protocol
+        \item Why is it needed?
+        \item Areas of application, quantum communications, quantum computers
+        \item what is needed to realize it on a large scale, i.e. quantum repeaters, memory...
+        \item EPR-pairs and bell basis
+    \end{itemize}
+\end{mybox}
+\subsection{Preliminaries}
+In quantum teleportation the sender and receiver are referred to as Alice and Bob, and are denoted A and B respectively. Sometimes a third party is relevant which will be called Charlie and be denoted C.
+
+\subsubsection{EPR-pairs and the Bell Basis}
+An Einstein-Podolsky-Rosen-pair (EPR-pair) is a maximally entangled state of two qubits \cite{Nielsen:2010} which can be written as
+\begin{equation}
+    \ket{\Phi^\pm} = \frac{\ket{00} \pm \ket{11}}{\sqrt{2}} \quad \text{and} \ket{\Psi^\pm} = \frac{\ket{01} \pm \ket{10}}{\sqrt{2}}.\label{eq:epr}
+\end{equation}
+When measuring a quantum state the basis of measurement is important as this determines the possible outcome states. Common basis used are the computational basis, consisting of $\ket{0}$ and $\ket{1}$, and the Bell basis consisting of the EPR-pairs, also known as Bell states, seen in Eq. \eqref{eq:epr}. EPR-pairs and projective measurements in the Bell basis play a crucial role in quantum teleportation protocols. \cite{Nielsen:2010}
+
+
+\subsection{Quantum Teleportation Protocol}
