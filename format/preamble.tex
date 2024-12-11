@@ -89,4 +89,10 @@
 %\end{comment}
 
 \usepackage{tcolorbox}
-\newtcolorbox{mybox}[1]{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,title=#1}
+\definecolor{lightblue}{rgb}{0.85, 0.85, 0.98}
+\definecolor{darkblue}{rgb}{0.3, 0.3, 0.95}
+\newtcolorbox{mybox}[1]{
+    colback=lightblue,
+    colframe=darkblue,
+    fonttitle=\bfseries,
+    title=#1}
