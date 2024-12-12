@@ -20,8 +20,6 @@ When measuring a quantum state the basis of measurement is important as this det
 
 
 \subsection{Quantum Teleportation Protocol}
-Good source? \cite{Bennett:1993}
-
 Let Alice have a particle with a normalized state $\ket{\phi} = \alpha \ket{0}_\phi + \beta \ket{1}_\phi$, which is unknown to her, that she wants to send to Bob. Sending the particle itself is rarely possible since Alice does not necessarily know where Bob located. She also cannot measure the particle to get accurate information since the particle is part of an unknown orthonormal set. To overcome these hurdles Alice can instead opt to send, or teleport, the state $\ket{\phi}$ to Bob. \cite{Bennett:1993}
 
 To realize this teleportation both a classical channel and a non-classical channel will be used. The non-classical channel is made of an EPR-pair, where one particle is with Alice and one with Bob. Let Alice and Bob share the EPR-pair 
@@ -50,4 +48,4 @@ Depending on the result of the measurement Bob will have the following states
     A: \ket{\Phi^-}_{\phi A} &\longrightarrow B: \alpha\ket{1}_B + \beta \ket{0}_B = X\ket{\phi}\\
     A: \ket{\Phi^+}_{\phi A} &\longrightarrow B: \alpha\ket{1}_B - \beta \ket{0}_B = -iY\ket{\phi}\\
 \end{align}
-That is Bob will end up with a rotated version of $\ket{\phi}$. Thus, if Alice sends the result of her measurement classically to Bob he can perform the necessary rotation to obtain the state $\ket{\phi}$. The classical channel can be a generic broadcast, i.e. a radio, which essentially means that Alice doesn't need to know where Bob is exactly. 
+That is Bob will end up with a rotated version of $\ket{\phi}$. Thus, if Alice sends the result of her measurement classically to Bob he can perform the necessary rotation to obtain the state $\ket{\phi}$. The classical channel can be a generic broadcast, i.e. a radio, which essentially means that Alice doesn't need to know where Bob is exactly. \cite{Bennett:1993}
