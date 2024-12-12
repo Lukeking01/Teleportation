@@ -7,15 +7,32 @@ Experimental evidence for quantum teleportation in quantum communications.
     \end{itemize}
 \end{mybox}
 \subsection{Satellite Based}
+
 1400 km \cite{Ren:2017}
 \begin{mybox}{Bullet points}
     \begin{itemize}
-        \item Protocol used
+        \item \overline{Protocol used}
         \item distance
         \item technical difficulties and innovations
         \item what does this mean for quantum communications?
     \end{itemize}
 \end{mybox}
+
+The qubit system used in this experiment is based on the polarization of a photon with a state represented as $\ket{\chi}_1 = \alpha\ket{H}_1 + \beta\ket{V}_1$, with complex numbers
+satisfying $\vert\alpha\vert² + \vert\beta\vert² = 1$ and $\ket{V}$ and $\ket{H}$ represents vertical and horizontal polarization respectively.
+ At a ground station, two entangled photon pairs were prepared and one photon from each pair was
+transmitted to a Satellite through a 130-mm diameter telescope with narrow beam divergence and high-precision tracking systmes to counteract the atmospheric turbulence.
+The entangled pair of photons can be written as one of the Bell states,
+\begin{equation}
+    \ket{\psi^{+}}_{23} = (\ket{H}_2\ket{H}_3 + \ket{V}_2\ket{V}_3)/\sqrt{2},
+\end{equation}
+where photon 2 is the photon kept at the ground station and photon 3 was sent to the Satellite.
+
+A joint measurement was one on the photon that was to be teleported and one of the entangled photons. This projects these photons into one of the Bell states.
+The result from this measurment was then classically sent to the Satellite. This measurement forces the entangled pair into a new state. If this state is 
+$\ket{\psi^{+}}_{12} = (\ket{H}_1\ket{H}_2 + \ket{V}_1\ket{V}_2)/\sqrt{2}$ the photon sent to the Satellite (photon 3) carries the state that photon 1 was in originally
+and if the measured state is $\ket{\psi^{-}}_{12} = (\ket{H}_1\ket{H}_2 - \ket{V}_1\ket{V}_2)/\sqrt{2}$, the state of photon 3 is equivalent of the state of photon 1 shifted $\pi$.
+
 
 
 \subsection{Fibre Network Based}
