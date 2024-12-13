@@ -18,22 +18,33 @@ Experimental evidence for quantum teleportation in quantum communications.
     \end{itemize}
 \end{mybox}
 
-The qubit system used in this experiment is based on the polarization of a photon with a state represented as $\ket{\chi}_1 = \alpha\ket{H}_1 + \beta\ket{V}_1$, with complex numbers
-satisfying $\vert\alpha\vert² + \vert\beta\vert² = 1$ and $\ket{V}$ and $\ket{H}$ represents vertical and horizontal polarization respectively.
- At a ground station, two entangled photon pairs were prepared and one photon from each pair was
-transmitted to a Satellite through a 130-mm diameter telescope with narrow beam divergence and high-precision tracking systmes to counteract the atmospheric turbulence.
-The entangled pair of photons can be written as one of the Bell states,
+The qubit system used in this experiment was based on the polarization of a photon, represented as:  
 \begin{equation}
-    \ket{\psi^{+}}_{23} = (\ket{H}_2\ket{H}_3 + \ket{V}_2\ket{V}_3)/\sqrt{2},
+    \ket{\chi}_1 = \alpha\ket{H}_1 + \beta\ket{V}_1,
 \end{equation}
-where photon 2 is the photon kept at the ground station and photon 3 was sent to the Satellite.
+where \(\alpha\) and \(\beta\) are complex numbers satisfying \(|\alpha|^2 + |\beta|^2 = 1\), and \(\ket{H}\) and \(\ket{V}\) denote 
+horizontal and vertical polarization states, respectively.  
 
-A joint measurement was one on the photon that was to be teleported and one of the entangled photons. This projects these photons into one of the Bell states.
-The result from this measurment was then classically sent to the Satellite. This measurement forces the entangled pair into a new state. If this state is 
-$\ket{\psi^{+}}_{12} = (\ket{H}_1\ket{H}_2 + \ket{V}_1\ket{V}_2)/\sqrt{2}$ the photon sent to the Satellite (photon 3) carries the state that photon 1 was in originally
-and if the measured state is $\ket{\psi^{-}}_{12} = (\ket{H}_1\ket{H}_2 - \ket{V}_1\ket{V}_2)/\sqrt{2}$, the state of photon 3 is equivalent of the state of photon 1 shifted $\pi$.
+At a ground station, two entangled photon pairs were prepared. One photon from each pair was transmitted to a satellite through a 
+130-mm-diameter telescope, designed with narrow beam divergence and high-precision tracking systems to counteract atmospheric turbulence. 
+The entangled pair of photons is described by one of the Bell states:
+\begin{equation}
+    \ket{\psi^{+}}_{23} = \frac{1}{\sqrt{2}} (\ket{H}_2\ket{H}_3 + \ket{V}_2\ket{V}_3),
+\end{equation}
+where photon 2 was retained at the ground station, and photon 3 was sent to the satellite.
 
+A joint measurement, known as a Bell-state measurement, was performed on the photon to be teleported (photon 1) and photon 2 from the entangled pair. 
+This measurement projected the two photons into one of the Bell states:
+\begin{equation}
+    \ket{\psi^{\pm}}_{12} = \frac{1}{\sqrt{2}} (\ket{H}_1\ket{H}_2 \pm \ket{V}_1\ket{V}_2).
+\end{equation}
 
+The outcome of the measurement was then transmitted classically to the satellite, where it influenced the state of photon 3. If the measured state was \(\ket{\psi^{+}}_{12}\), photon 3 adopted the original state of photon 1. If the measured state was \(\ket{\psi^{-}}_{12}\), photon 3 carried the original state of photon 1, but with a \(\pi\)-phase shift.  
+
+This experiment demonstrated the successful teleportation of a photon's quantum state over distances of up to 1400 kilometers, from a ground station to a satellite in low-Earth orbit. The primary technical challenges included atmospheric turbulence, which caused beam wandering and broadening, resulting in significant signal losses. These challenges were addressed through the use of a narrow beam divergence, a high-precision telescope, and an advanced acquiring, pointing, and tracking (APT) system.
+
+In the future, this method could be used to create a global quantum internet, connecting quantum computers across the globe and introducing secure cryptography protocols. 
+This also raises the possibility of letting several quantum processors work together on a single problem, enhancing the efficacy of quantum computers.
 
 \subsection{Fibre Network Based}
 100 km \cite{Takesue:2015}. Metropolitan \cite{Valivarthi:2016}
