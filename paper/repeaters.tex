@@ -12,7 +12,49 @@ Quantum internet \cite{Azuma:2023}
 
 \subsection{Entanglement swapping}
 
-\subsection{Quantum repeater protocol}
-No cloning but instead entanglement swapping
+Assuming that Alice and Bob are too far apart from each other to efficiently transport an entangled state between them,
+an option is entanglement swapping. Assume that Alice and Bob each share an entangled state with the third part, Charlie.
+These states would be $\ket{\phi}_{AC_1}$ and $\ket{\phi}_{BC_2}$. If Charlie now performs a simultaneus measurement on his two states, $C_1$ and $C_2$
+Alice and Bobs qubits will end up in an entangled state. This is a way of propagating entaglement through a third part to achieve more reliable longer distance entaglement.
 
-\subsection{Experimental realizations}
+\subsection{Quantum memories (p.34)??}
+\subsection{Quantum repeater protocol}
+%No cloning but instead entanglement swapping
+If long distance distribution of entanglement were to be achieved through optical fibers, one would experience an exponential loss of photons.
+ To overcome this loss, quantum repeaters use heralded entanglement generation and entanglement swapping.
+ Heralded entanglement generation involves establishing
+ local Bell states between quantum memories and optical pulses at each party (e.g., Alice and a repeater node or two repeater nodes).
+ The optical pulses are sent through fibers to a central station where a linear-optical Bell measurement is performed,
+ projecting the pulses into an entangled Bell state with success probability 
+ \begin{equation}
+    p_g(l) = e^{-l/L_{\text{att}}}/2,
+ \end{equation}
+ where $l$ is the fiber length and $L_{\text{att}}$ is the attenuation length.
+ Once neighboring parties share entanglement with a repeater node, entanglement swapping extends the entanglement between more distant parties.
+ This is achieved via a Bell measurement on the quantum memories at the repeater node, succeeding with probability $p_s = 1/2$ in the ideal case.
+ Without repeaters, directly linking Alice and Bob requires an average number of trials 
+ \begin{equation}
+    \langle T^{(0)}_{\text{tot}} \rangle = p_g(L)^{-1} = 2e^{L/L_{\text{att}}},
+ \end{equation}
+ which grows exponentially with the distance $L$. With a single repeater node located midway, entanglement generation is performed in parallel for Alice-to-repeater and repeater-to-Bob links,
+ each requiring 
+ \begin{equation}
+    \langle T_g(L/2) \rangle = 2e^{L/(2L_{\text{att}})}
+ \end{equation}
+ trials on average. Successful swapping at the repeater node then connects Alice and Bob,
+ requiring 
+ \begin{equation}
+    \langle T^{(1)}_{\text{tot}} \rangle \sim p_s^{-1} p_g(L/2)^{-1} = 2^2 e^{L/(2L_{\text{att}})}
+ \end{equation}
+ trials, providing a square-root improvement compared to the direct link.
+ This process generalizes with $N_{\text{QR}} = 2^n - 1$ equally spaced repeater nodes, where each step reduces the entanglement distance to $L/(N_{\text{QR}} + 1)$,
+ achieving a total trial count of
+ \begin{equation}
+    \langle T^{(N_{\text{QR}})}_{\text{tot}} \rangle \sim 2^{1+\log_2(N_{\text{QR}} + 1)} e^{L/((N_{\text{QR}} + 1)L_{\text{att}})},
+ \end{equation}
+ exponentially improving efficiency. While this idealized protocol assumes perfect operations and quantum memories, practical implementations must account for memory errors,
+ imperfect operations, and accumulated errors, mitigated by advanced error-suppression techniques. Thus,
+ quantum repeaters enable scalable quantum communication by mitigating photon loss and other imperfections over long distances.
+
+
+\subsection{Experimental realizations???}
