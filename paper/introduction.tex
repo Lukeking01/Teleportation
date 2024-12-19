@@ -18,11 +18,11 @@ An Einstein-Podolsky-Rosen-pair (EPR-pair) is a maximally entangled state of two
 \begin{equation}
     \ket{\Phi^\pm} = \frac{\ket{00} \pm \ket{11}}{\sqrt{2}} \quad \text{and} \ket{\Psi^\pm} = \frac{\ket{01} \pm \ket{10}}{\sqrt{2}}.\label{eq:epr}
 \end{equation}
-When measuring a quantum state the basis of measurement is important as this determines the possible outcome states. Common basis used are the computational basis, consisting of $\ket{0}$ and $\ket{1}$, and the Bell basis consisting of the EPR-pairs, also known as Bell states, seen in Eq. \eqref{eq:epr}. EPR-pairs and projective measurements in the Bell basis, henceforth called Bell measurements, play a crucial role in quantum teleportation protocols. \cite{Nielsen:2010}
+When measuring a quantum state, the basis of measurement is important as this determines the possible outcome states. Common basis used are the computational basis, consisting of $\ket{0}$ and $\ket{1}$, and the Bell basis consisting of the EPR-pairs, also known as Bell states, seen in Eq. \eqref{eq:epr}. EPR-pairs and projective measurements in the Bell basis, henceforth called Bell measurements, play a crucial role in quantum teleportation protocols. \cite{Nielsen:2010}
 
 
 \subsection{Quantum Teleportation Protocol}
-Let Alice have a particle with a normalized state $\ket{\phi} = \alpha \ket{0}_\phi + \beta \ket{1}_\phi$, which is unknown to her, that she wants to send to Bob. Sending the particle itself is rarely possible since Alice does not necessarily know where Bob located. She also cannot measure the particle to get accurate information since the particle is part of an unknown orthonormal set. To overcome these hurdles Alice can instead opt to send, or teleport, the state $\ket{\phi}$ to Bob. \cite{Bennett:1993}
+Let Alice have a particle with a normalized state $\ket{\phi} = \alpha \ket{0}_\phi + \beta \ket{1}_\phi$, which is unknown to her, that she wants to send to Bob. Sending the particle itself is rarely possible since Alice does not necessarily know where Bob located. She also cannot measure the particle to get accurate information since the particle is part of an unknown orthonormal set. To overcome these hurdles, Alice can instead opt to send, or teleport, the state $\ket{\phi}$ to Bob. \cite{Bennett:1993}
 
 To realize this teleportation both a classical channel and a non-classical channel will be used. The non-classical channel is made of an EPR-pair, where one particle is with Alice and one with Bob. Let Alice and Bob share the EPR-pair 
 \begin{equation}
@@ -36,9 +36,9 @@ Rewriting the products $\ket{x}_\phi\ket{x}_A$, that is the part of the system t
 \begin{multline}
     \ket{\psi} = \frac{1}{2}\left[
         \ket{\Psi^-}_{\phi A} (-\alpha\ket{0}_B - \beta\ket{1}_B)   
-        \ket{\Psi^+}_{\phi A} (-\alpha\ket{0}_B + \beta\ket{1}_B)\right.\\
-        \left.\ket{\Phi^-}_{\phi A} (\alpha\ket{1}_B + \beta\ket{0}_B)
-        \ket{\Phi^+}_{\phi A} (\alpha\ket{1}_B - \beta\ket{0}_B)
+        +\ket{\Psi^+}_{\phi A} (-\alpha\ket{0}_B + \beta\ket{1}_B)\right.\\
+        \left.+\ket{\Phi^-}_{\phi A} (\alpha\ket{1}_B + \beta\ket{0}_B)
+        +\ket{\Phi^+}_{\phi A} (\alpha\ket{1}_B - \beta\ket{0}_B)
         \right]  
 \end{multline}
 That is, if Alice performs a Bell measurement the system will collapse into one of these terms. \cite{Bennett:1993}
@@ -53,7 +53,7 @@ Depending on the result of Alice's measurement Bob will have the following state
 That is Bob will end up with a rotated version of $\ket{\phi}$. Thus, if Alice sends the result of her measurement classically to Bob he can perform the necessary rotation to obtain the state $\ket{\phi}$. The classical channel can be a generic broadcast, i.e. a radio, which essentially means that Alice doesn't need to know where Bob is exactly. Note that the choice of $\ket{\Psi^-}$ as the shared EPR-pair was arbitrary. However, which state is shared must be known by both parties since that will change what gate Bob has to apply to obtain $\ket{\phi}$. \cite{Bennett:1993}
 
 \subsection{Reasons and Applications}
-Quantum communications and quantum computing are two large fields being researched at the moment, and it is important to ask the question of why this effort is worth it. For one thing in the age of information, sending and receiving data is increasingly more important as we rely more and more on technology \cite{Azuma:2023}. A corollary of this is then that secure communication is of the utmost importance to keep our personal information secure. \cite{Hu:2023}
+Quantum communications and quantum computing are two large fields being researched at the moment, and it is important to ask the question of why this effort is worth it. For one thing, in the age of information, sending and receiving data is increasingly more important as we rely more and more on technology \cite{Azuma:2023}. A corollary of this is then that secure communication is of the utmost importance to keep our personal information secure. \cite{Hu:2023}
 
 Quantum communication opens up possibilities of transmitting data unable to be compromised using entangled states \cite{Hu:2023}. Furthermore, quantum computing could, if developed sufficiently, apply Shor's algorithm to break the current encryption used by modern digital technology \cite{Nielsen:2010}. It could therefore prove useful, or even paramount, to have a quantum internet complementing the current digital one \cite{Azuma:2023}.
 
