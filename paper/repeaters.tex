@@ -12,35 +12,20 @@
 
 \subsection{Entanglement swapping}
 
-Assuming that Alice and Bob are too far apart from each other to efficiently transport an entangled state between them,
-an option is entanglement swapping. Assume that Alice and Bob each share an entangled state with the third part, Charlie.
-These states would be $\ket{\phi}_{AC_1}$ and $\ket{\phi}_{BC_2}$. If Charlie now performs a simultaneous measurement on his two states, $C_1$ and $C_2$,
-Alice and Bobs qubits will end up in an entangled state. This is a way of propagating entanglement through a third part in order to achieve more reliable long distance entanglement \cite{Azuma:2023}.
+Assuming that Alice and Bob are too far apart from each other to efficiently transport an entangled state between them, an option is entanglement swapping. Assume that Alice and Bob each share an entangled state with a third party, Charlie. These states would be $\ket{\phi}_{AC_1}$ and $\ket{\phi}_{BC_2}$. If Charlie now performs a simultaneous measurement on his two states, $C_1$ and $C_2$, Alice's and Bob's qubits will end up in an entangled state. This is a way of propagating entanglement through a third party in order to achieve more reliable long distance entanglement \cite{Azuma:2023}.
 
 \subsection{Quantum memory}
 
-For the entanglement swapping to be efficiently used in a repeater protocol, 
-Charlie needs to store the quantum state sent by Alice, while waiting for Bobs state. This requires a way of storing the state without destroying the information it carries.
-Classically this is not a problem, since information can be duplicated exactly. In quantum information this is not possible due to the no-cloning theorem.
-A quantum state can not be completely duplicated, meaning that the qubit carrying the state must be stored itself.
-Such a memory has been realized in many different ways, including storing the state in trapped ions, with a memory time of 4 ms \cite{trapped_ion_memory} and in quantum dots with a memory time of 3 $\mu$s \cite{dot_memory}.
+For the entanglement swapping to be efficiently used in a repeater protocol, Charlie needs to store the quantum state sent by Alice, while waiting for Bob's state. This requires a way of storing the state without destroying the information it carries. Classically this is not a problem, since information can be duplicated exactly. In quantum information this is not possible due to the no-cloning theorem. A quantum state can not be completely duplicated, meaning that the qubit carrying the state must be stored itself. Such a memory has been realized in many different ways, including storing the state in trapped ions, with a memory time of 4 ms \cite{trapped_ion_memory} and in quantum dots with a memory time of 3 $\mu$s \cite{dot_memory}.
 
 
 \subsection{Quantum repeater protocol}
 %No cloning but instead entanglement swapping
-If long distance distribution of entanglement were to be achieved through optical fibers, one would experience an exponential loss of photons.
- To overcome this loss, quantum repeaters use heralded entanglement generation and entanglement swapping.
- Heralded entanglement generation involves establishing
- local Bell states between quantum memories and optical pulses at each party (e.g., Alice and a repeater node or two repeater nodes).
- Thus there needs to be a quantum memory unit at each party. The optical pulses are sent through fibers to a central station where a linear-optical Bell measurement is performed,
- projecting the pulses into an entangled Bell state with success probability 
+If long distance distribution of entanglement were to be achieved through optical fibers, one would experience an exponential loss of photons. To overcome this loss, quantum repeaters use heralded entanglement generation and entanglement swapping. Heralded entanglement generation involves establishing local Bell states between quantum memories and optical pulses at each party (e.g., Alice and a repeater node, or between two repeater nodes). Thus there needs to be a quantum memory unit at each party. The optical pulses are sent through fibers to a central station where a linear-optical Bell measurement is performed, projecting the pulses into an entangled Bell state with success probability 
  \begin{equation}
-    p_g(l) = e^{-l/L_{\text{att}}}/2,
+    p_g(L) = e^{-L/L_{\text{att}}}/2,
  \end{equation}
- where $l$ is the fiber length and $L_{\text{att}}$ is the attenuation length, defined as the distance over which the transmittance of the fiber has dropped to $1/e$ of its initial value \cite{Azuma:2023}.% \textbf{Något om hur $L_{att}$ är definierat}
- Once neighboring parties share entanglement with a repeater node, entanglement swapping extends the entanglement between more distant parties.
- This is achieved via a Bell measurement on the quantum memories at the repeater node, succeeding with probability $p_s = 1/2$ in the ideal case.
- Without repeaters, directly linking Alice and Bob requires an average number of trials 
+ where $L$ is the fiber length and $L_{\text{att}}$ is the attenuation length, defined as the distance over which the transmittance of the fiber has dropped to $1/e$ of its initial value \cite{Azuma:2023}. Once neighboring parties share entanglement with a repeater node, entanglement swapping extends the entanglement between more distant parties. This is achieved via a Bell measurement on the quantum memories at the repeater node, succeeding with probability $p_s = 1/2$ in the ideal case. Without repeaters, directly linking Alice and Bob requires an average number of trials 
  \begin{equation}
     \langle T^{(0)}_{\text{tot}} \rangle = p_g(L)^{-1} = 2e^{L/L_{\text{att}}},
  \end{equation}
@@ -49,13 +34,11 @@ If long distance distribution of entanglement were to be achieved through optica
  \begin{equation}
     \langle T_g(L/2) \rangle = 2e^{L/(2L_{\text{att}})}
  \end{equation}
- trials on average. Successful swapping at the repeater node then connects Alice and Bob,
- requiring 
+ trials on average. Successful swapping at the repeater node then connects Alice and Bob, requiring 
  \begin{equation}
     \langle T^{(1)}_{\text{tot}} \rangle \sim p_s^{-1} p_g(L/2)^{-1} = 2^2 e^{L/(2L_{\text{att}})}
  \end{equation}
- trials, providing a square-root improvement compared to the direct link \cite{Azuma:2023}.
- This process generalizes with $N_{\text{QR}} = 2^n - 1$ equally spaced repeater nodes, where each step reduces the entanglement distance to $L/(N_{\text{QR}} + 1)$,
+trials, providing a square-root improvement compared to the direct link \cite{Azuma:2023}. This process generalizes with the number of quantum repeaters $N_{\text{QR}} = 2^n - 1$ equally spaced repeater nodes, where each step reduces the entanglement distance to $L/(N_{\text{QR}} + 1)$,
  achieving a total trial count of
  \begin{equation}
     \langle T^{(N_{\text{QR}})}_{\text{tot}} \rangle \sim 2^{1+\log_2(N_{\text{QR}} + 1)} e^{L/((N_{\text{QR}} + 1)L_{\text{att}})},
