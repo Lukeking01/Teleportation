@@ -1,12 +1,13 @@
 \section{Teleportation of Complex Quantum Systems}
-\begin{mybox}{Bullet points}
-    \begin{itemize}
+%\begin{mybox}{Bullet points}
+ %   \begin{itemize}
         %\item What is a complex system?
         %\item How does the protocol differ from simple systems?
         %\item Why is it important to be able to teleport complex quantum systems?
-        \item Theoretical and experimental limits
-    \end{itemize}
-\end{mybox}
+        %\item Theoretical and experimental limits
+ %   \end{itemize}
+%\end{mybox}
+To make quantum teleportation interesting for practical applications, teleporting simple systems will not be sufficient. It is therefore important to discuss the possibilities of teleporting complex systems, as these describe particles in nature more completely.
 
 \subsection{Complex Quantum Systems}
 A complex quantum system is a system of particles where each particle has multiple degrees of freedom, in turn, one degree of freedom can have quantum numbers other than the basic $\ket{1}$ and $\ket{0}$. That is, to make quantum teleportation a practical technique for quantum communication it needs to be possible to teleport these high dimensional states, since we want to be able to teleport a complete quantum state for a given particle. For example, two of the ways a photon may be encoded in is polarization and orbital angular momentum. This also increases the information density of the particles used to transmit information. \cite{Hu:2023}
@@ -18,7 +19,7 @@ For a 3-dimensional system, suppose Alice wants to teleport the normalized state
 \begin{equation}
     \ket{\Psi}_{AB} = \frac{\ket{00}_{AB} + \ket{11}_{AB} + \ket{22}_{AB}}{\sqrt{3}}
 \end{equation}
-which is a 3-dimensional Bell state. The nine total 3-dimensional Bell states together create a basis of the Hilbert space. Then the entire system will be $\ket{\phi}\ket{\Psi}_{AB}$ and doing a similar, but more complicated, rewriting of the expression one can get to a point where there is equal probability to project the state into one of nine states when Alice performs her Bell measurement. Then, Alice classically transmits the result and Bob perform the necessary rotations to obtain $\ket{\phi}$. This can be extended to $d$-dimensions with $d^2$ Bell states in the basis. \cite{Luo:2019}
+which is a 3-dimensional Bell state. The nine total 3-dimensional Bell states together create a basis of the Hilbert space. Then the entire system will be $\ket{\phi}\ket{\Psi}_{AB}$ and doing a similar, but more complicated, rewriting of the expression one can get to a point where there is equal probability to project the state into one of nine states when Alice performs her Bell measurement. Then, Alice classically transmits the result and Bob perform the necessary rotations to obtain $\ket{\phi}$. \cite{Luo:2019}
 
 \subsection{Experimental Realization}
 One experimentally proven Bell measurement scheme uses quantum Fourier transformations. The experiment teleported a 3-dimensional system using one auxiliary particle. However, it has been shown that for dimension $d$, $d-2$ auxiliary particles are needed. The fidelity of this experiment was $\SI{75\pm 1}{\percent}$. The system was encoded using path the path of the photon. That is, by using a series of mirrors and beam splitters, it is possible to generate superposition states. \cite{Luo:2019}
