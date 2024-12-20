@@ -11,7 +11,7 @@
 \end{mybox}
 \end{comment}
 \subsection{Preliminaries}
-In quantum teleportation the sender and receiver are referred to as Alice and Bob, and are denoted A and B respectively. Sometimes a third party is relevant which will be called Charlie and be denoted C. \cite{Nielsen:2010}
+In quantum teleportation the sender and receiver are referred to as Alice and Bob, and are denoted $A$ and $B$ respectively. Sometimes a third party is relevant which will be called Charlie and be denoted $C$. \cite{Nielsen:2010}
 
 \subsubsection{EPR-pairs and the Bell Basis}
 An Einstein-Podolsky-Rosen-pair (EPR-pair) is a maximally entangled state of two qubits \cite{Nielsen:2010} which can be written as
@@ -22,7 +22,7 @@ When measuring a quantum state, the basis of measurement is important as this de
 
 
 \subsection{Quantum Teleportation Protocol}
-Let Alice have a particle with a normalized state $\ket{\phi} = \alpha \ket{0}_\phi + \beta \ket{1}_\phi$, which is unknown to her, that she wants to send to Bob. Sending the particle itself is rarely possible since Alice does not necessarily know where Bob located. She also cannot measure the particle to get accurate information since the particle is part of an unknown orthonormal set. To overcome these hurdles, Alice can instead opt to send, or teleport, the state $\ket{\phi}$ to Bob. \cite{Bennett:1993}
+Let Alice have a particle with a normalized state $\ket{\phi} = \alpha \ket{0}_\phi + \beta \ket{1}_\phi$ which is unknown to her, that she wants to send to Bob. Sending the particle itself is rarely possible since Alice does not necessarily know where Bob is located. She also cannot measure the particle to get accurate information since the particle is part of an unknown orthonormal set. To overcome these hurdles, Alice can instead opt to send, or teleport, the state $\ket{\phi}$ to Bob. \cite{Bennett:1993}
 
 To realize this teleportation both a classical channel and a non-classical channel will be used. The non-classical channel is made of an EPR-pair, where one particle is with Alice and one with Bob. Let Alice and Bob share the EPR-pair 
 \begin{equation}
@@ -30,9 +30,9 @@ To realize this teleportation both a classical channel and a non-classical chann
 \end{equation}
 The subscript denotes if Alice or Bob has the particle. Thus, the entire system is in the state 
 \begin{align}
-    \ket{\psi} &=\ket{\phi}\ket{\Psi^-}_{AB} \\ &= \frac{\alpha}{\sqrt{2}} (\ket{0}_\phi \ket{0}_A \ket{1}_B - \ket{0}_\phi \ket{1}_A \ket{0}_B) + \frac{b}{\sqrt{2}} (\ket{1}_\phi \ket{0}_A \ket{1}_B - \ket{1}_\phi \ket{1}_A \ket{0}_B)
+    \ket{\psi} &=\ket{\phi}\ket{\Psi^-}_{AB} \\ &= \frac{\alpha}{\sqrt{2}} (\ket{0}_\phi \ket{0}_A \ket{1}_B - \ket{0}_\phi \ket{1}_A \ket{0}_B) + \frac{\beta}{\sqrt{2}} (\ket{1}_\phi \ket{0}_A \ket{1}_B - \ket{1}_\phi \ket{1}_A \ket{0}_B)
 \end{align}
-Rewriting the products $\ket{x}_\phi\ket{x}_A$, that is the part of the system that is with Alice, using the Bell basis the system can be written as 
+Rewriting the products $\ket{x}_\phi\ket{x}_A$, that is the Alice's system, using the Bell basis the system can be written as 
 \begin{multline}
     \ket{\psi} = \frac{1}{2}\left[
         \ket{\Psi^-}_{\phi A} (-\alpha\ket{0}_B - \beta\ket{1}_B)   
@@ -50,13 +50,13 @@ Depending on the result of Alice's measurement Bob will have the following state
     A: \ket{\Phi^-}_{\phi A} &\longrightarrow B: \alpha\ket{1}_B + \beta \ket{0}_B = X\ket{\phi}\\
     A: \ket{\Phi^+}_{\phi A} &\longrightarrow B: \alpha\ket{1}_B - \beta \ket{0}_B = -iY\ket{\phi}\\
 \end{align}
-That is Bob will end up with a rotated version of $\ket{\phi}$. Thus, if Alice sends the result of her measurement classically to Bob he can perform the necessary rotation to obtain the state $\ket{\phi}$. The classical channel can be a generic broadcast, i.e. a radio, which essentially means that Alice doesn't need to know where Bob is exactly. Note that the choice of $\ket{\Psi^-}$ as the shared EPR-pair was arbitrary. However, which state is shared must be known by both parties since that will change what gate Bob has to apply to obtain $\ket{\phi}$. \cite{Bennett:1993}
+That is Bob will end up with a rotated version of $\ket{\phi}$. Thus, if Alice sends the result of her measurement classically to Bob he can perform the necessary rotation to obtain the state $\ket{\phi}$. The classical channel can be a generic broadcast, i.e. a radio, which essentially means that Alice doesn't need to know Bob's location. Note that the choice of $\ket{\Psi^-}$ as the shared EPR-pair was arbitrary. However, which state is shared must be known by both parties since that will change what gate Bob has to apply to obtain $\ket{\phi}$. \cite{Bennett:1993}
 
 \subsection{Reasons and Applications}
 Quantum communications and quantum computing are two large fields being researched at the moment, and it is important to ask the question of why this effort is worth it. For one thing, in the age of information, sending and receiving data is increasingly more important as we rely more and more on technology \cite{Azuma:2023}. A corollary of this is then that secure communication is of the utmost importance to keep our personal information secure. \cite{Hu:2023}
 
 Quantum communication opens up possibilities of transmitting data unable to be compromised using entangled states \cite{Hu:2023}. Furthermore, quantum computing could, if developed sufficiently, apply Shor's algorithm to break the current encryption used by modern digital technology \cite{Nielsen:2010}. It could therefore prove useful, or even paramount, to have a quantum internet complementing the current digital one \cite{Azuma:2023}.
 
-To realize a full scale quantum internet, or even larger quantum networks, technologies decreasing attenuation of the signal and storing information is essential \cite{Azuma:2023}. That is, a successful quantum communication protocol will need to apply both quantum memory technologies and quantum repeater technologies. It is therefore not sufficient to just focus on quantum computers for calculation but also infrastructure and technologies to link multiple quantum computers together. Specifically one application could be secure cloud based computing \cite{Azuma:2023} which could increase the accessibility to run quantum computation algorithms. Such algorithm's could solve some computational tasks exponentially faster thus decreasing energy needed, and thus effects on the climate. Quantum simulation algorithms can also help in the quest of understanding molecular reaction, helping to create more efficient catalysts \cite{Outeiral:2021}.
+To realize a full scale quantum internet, or even larger quantum networks, technologies decreasing attenuation of the signal and storing information is essential \cite{Azuma:2023}. That is, a successful quantum communication protocol will need to apply both quantum memory technologies and quantum repeater technologies. It is therefore not sufficient to just focus on quantum computers for calculation but also infrastructure and technologies to link multiple quantum computers together. Specifically one application could be secure cloud based computing \cite{Azuma:2023} which could increase the accessibility to run quantum computation algorithms. Such algorithm's could solve some computational tasks exponentially faster, thus decreasing energy needed, and effects on the climate. Quantum simulation algorithms can also help in the quest of understanding molecular reaction, helping to create more efficient catalysts \cite{Outeiral:2021}.
 
 A recent paper \cite{Acharya:2024} shows that quantum computers are scalable and are getting increasingly better regarding error-corrections and accuracy of measurements. This shows a great outlook for the field of quantum computers. The importance of being able to scale the network of quantum computers then becomes readily apparent.
